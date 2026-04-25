@@ -48,6 +48,12 @@ public enum DataBaseColors {
                 .toArray(DataBaseColors[]::new);
     }
 
+    public static DataBaseColors[] getSoloTolerancias() {
+        return java.util.Arrays.stream(values())
+                .filter(c -> c.tolerance1 != null)
+                .toArray(DataBaseColors[]::new);
+    }
+
     public Color getColor() {
         return color;
     }

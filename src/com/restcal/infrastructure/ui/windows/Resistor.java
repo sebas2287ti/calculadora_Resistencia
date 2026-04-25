@@ -38,9 +38,13 @@ public class Resistor extends JFrame {
 
         JComboBox<DataBaseColors> ComboBoxDigit1 = UiConstrutor.CrearComboBox(245,277,142,267, DataBaseColors.getSoloDigitos());
         JComboBox<DataBaseColors> ComboBoxDigit2 = UiConstrutor.CrearComboBox(298,330,142,267, DataBaseColors.getSoloDigitos());
+        JComboBox<DataBaseColors> ComboBoxMultiple1 = UiConstrutor.CrearComboBox(351,384,142,267, DataBaseColors.getSoloMultiplicadores());
+        JComboBox<DataBaseColors> ComboBoxTolerance1 = UiConstrutor.CrearComboBox(502,538,142,267, DataBaseColors.getSoloTolerancias());
 
         background.add(ComboBoxDigit1);
         background.add(ComboBoxDigit2);
+        background.add(ComboBoxMultiple1);
+        background.add(ComboBoxTolerance1);
 
         if (mainPanel != null) {
         mainPanel.setOpaque(false);
