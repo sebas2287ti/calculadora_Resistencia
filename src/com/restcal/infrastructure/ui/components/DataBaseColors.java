@@ -2,6 +2,7 @@ package com.restcal.infrastructure.ui.components;
 
 import java.awt.*;
 import java.awt.Color;
+import java.security.PublicKey;
 
 
 public enum DataBaseColors {
@@ -16,23 +17,50 @@ public enum DataBaseColors {
     VIOLET(new Color(143, 0, 255),7F,7F,0F),
     GREY(Color.GRAY,8F,8F,0F),
     WHITE(Color.WHITE,9F,9F,0F),
-    GOLDEN(new Color(211, 175, 55),0F,0F,0.05F),
-    SILVER(new Color(192, 192, 192), 0F,0F,0.1F)
+    GOLDEN(new Color(211, 175, 55),null,null,0.05F),
+    SILVER(new Color(192, 192, 192), null,null,0.1F)
 
     ;
 
     private Color color;
-    private float digit1;
-    private float digit2;
-    private float multiple1;
-    private float tolerance1;
+    private Float digit1;
+    private Float multiple1;
+    private Float tolerance1;
 
 
 
-    DataBaseColors (Color color, float digit1, float multiple1, float tolerance1 ) {
+    DataBaseColors (Color color, Float digit1, Float multiple1, Float tolerance1 ) {
         this.color = color;
         this.digit1 = digit1;
         this.multiple1 = multiple1;
         this.tolerance1 = tolerance1;
+    }
+
+    public static DataBaseColors[] getSoloDigitos() {
+        return java.util.Arrays.stream(values())
+                .filter(c -> c.digit1 != null)
+                .toArray(DataBaseColors[]::new);
+    }
+
+    public static DataBaseColors[] getSoloMultiplicadores() {
+        return java.util.Arrays.stream(values())
+                .filter(c -> c.multiple1 != null)
+                .toArray(DataBaseColors[]::new);
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public float getDigit1() {
+        return digit1;
+    }
+
+    public float getMultiple1() {
+        return multiple1;
+    }
+
+    public float getTolerance1() {
+        return tolerance1;
     }
 }

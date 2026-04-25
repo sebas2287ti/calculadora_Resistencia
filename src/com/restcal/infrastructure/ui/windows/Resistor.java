@@ -2,6 +2,8 @@ package com.restcal.infrastructure.ui.windows;
 
 import com.restcal.infrastructure.ui.components.Background;
 import com.restcal.infrastructure.ui.components.DataBaseColors;
+import com.restcal.infrastructure.ui.components.UiConstrutor;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -23,7 +25,7 @@ public class Resistor extends JFrame {
 
     public JPanel getMainPanel() {
         Background background = new Background("/assets/images/Resistencia.png");
-        background.setLayout(new BorderLayout());
+        background.setLayout(null);
 
         /*
         background.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -33,6 +35,12 @@ public class Resistor extends JFrame {
             }
         });
         */
+
+        JComboBox<DataBaseColors> ComboBoxDigit1 = UiConstrutor.CrearComboBox(245,277,142,267, DataBaseColors.getSoloDigitos());
+        JComboBox<DataBaseColors> ComboBoxDigit2 = UiConstrutor.CrearComboBox(298,330,142,267, DataBaseColors.getSoloDigitos());
+
+        background.add(ComboBoxDigit1);
+        background.add(ComboBoxDigit2);
 
         if (mainPanel != null) {
         mainPanel.setOpaque(false);
