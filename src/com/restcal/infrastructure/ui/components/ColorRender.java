@@ -18,9 +18,6 @@ public class ColorRender extends DefaultListCellRenderer {
             setBackground(colorEnum.getColor());
             setOpaque(true);
 
-
-
-
         }
 
         if (isSelected) {
