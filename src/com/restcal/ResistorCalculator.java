@@ -4,6 +4,8 @@ import javax.swing.*;
 import com.restcal.infrastructure.ui.windows.Resistor;
 import com.restcal.infrastructure.ui.windows.*;
 
+import java.awt.*;
+
 public class ResistorCalculator {
     public static void main(String[] args) {
 
@@ -14,7 +16,8 @@ public class ResistorCalculator {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setContentPane(ui.getMainPanel());
-        //frame.setSize(800, 700);
+        frame.setPreferredSize(new Dimension(800, 475));
+        frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
