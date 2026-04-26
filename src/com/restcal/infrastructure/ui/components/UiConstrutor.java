@@ -1,6 +1,6 @@
     package com.restcal.infrastructure.ui.components;
 
-    import javax.swing.JComboBox;
+    import javax.swing.*;
 
     public class UiConstrutor {
 
@@ -24,5 +24,16 @@
             });
 
             return comboBox;
+        }
+
+        public static JButton CrearBoton (int x1, int x2, int y1, int y2, String texto ) {
+            JButton Boton = new JButton();
+
+            int h = (x2-x1);
+            int w = (y2-y1);
+            Boton.setBounds(x1, y1, h, w);
+            Boton.setText(texto);
+
+            return Boton;
         }
     }
