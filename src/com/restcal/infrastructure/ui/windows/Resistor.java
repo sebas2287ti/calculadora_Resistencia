@@ -20,6 +20,10 @@ public class Resistor extends JFrame {
         //298. 142 -- 330, 267 color2
         //351, 142 -- 384, 267 mult1
         //515, 142 -- 538. 267 tolerance
+        /*
+        X: 246 , Y: 286
+        X: 554 , Y: 324
+         */
 
     }
 
@@ -27,14 +31,14 @@ public class Resistor extends JFrame {
         Background background = new Background("/assets/images/Resistencia.png");
         background.setLayout(null);
 
-        /*
+
         background.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
             public void mouseClicked(java.awt.event.MouseEvent e) {
                 System.out.println(" X: " + e.getX() + " , Y: " + e.getY());
             }
         });
-        */
+
 
         JComboBox<DataBaseColors> ComboBoxDigit1 = UiConstrutor.CrearComboBox(245,277,142,267, DataBaseColors.getSoloDigitos());
         JComboBox<DataBaseColors> ComboBoxDigit2 = UiConstrutor.CrearComboBox(298,330,142,267, DataBaseColors.getSoloDigitos());

@@ -16,7 +16,6 @@
             int w = (y2-y1);
             comboBox.setBounds(x1,y1, h, w);
             comboBox.setBackground(colores[0].getColor());
-
             comboBox.addActionListener(e -> {
                 DataBaseColors seleccionado = (DataBaseColors) comboBox.getSelectedItem();
                 if (seleccionado != null) {
