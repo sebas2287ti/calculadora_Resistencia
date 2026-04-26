@@ -45,12 +45,16 @@ public class Resistor extends JFrame {
         JComboBox<DataBaseColors> ComboBoxMultiple1 = UiConstrutor.CrearComboBox(351,384,142,267, DataBaseColors.getSoloMultiplicadores());
         JComboBox<DataBaseColors> ComboBoxTolerance1 = UiConstrutor.CrearComboBox(502,538,142,267, DataBaseColors.getSoloTolerancias());
         JButton BotonCalcular = UiConstrutor.CrearBoton(246,554,286,324, "Calcular");
+        JLabel OhmiosMax = UiConstrutor.CrearLabel(653,750,153,188, "0Ω");
+        JLabel Ohmiosmin = UiConstrutor.CrearLabel(653,750,219,254, "0Ω");
 
         background.add(ComboBoxDigit1);
         background.add(ComboBoxDigit2);
         background.add(ComboBoxMultiple1);
         background.add(ComboBoxTolerance1);
         background.add(BotonCalcular);
+        background.add(OhmiosMax);
+        background.add(Ohmiosmin);
 
         if (mainPanel != null) {
         mainPanel.setOpaque(false);

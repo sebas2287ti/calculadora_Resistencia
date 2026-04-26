@@ -36,4 +36,15 @@
 
             return Boton;
         }
+
+        public static JLabel CrearLabel (int x1, int x2, int y1, int y2, String texto ) {
+            javax.swing.JLabel Label = new JLabel();
+
+            int h = (x2-x1);
+            int w = (y2-y1);
+            Label.setBounds(x1, y1, h, w);
+            Label.setText(texto);
+
+            return Label;
+        }
     }
