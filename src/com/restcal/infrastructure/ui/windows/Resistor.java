@@ -49,8 +49,17 @@ public class Resistor extends JFrame {
                 float max = logica.ResistorOhmiosMax(ArrayData[0], ArrayData[1], ArrayData[2], ArrayData[3]);
                 float min = logica.ResistorOhmiosmin(ArrayData[0], ArrayData[1], ArrayData[2], ArrayData[3]);
 
-                OhmiosMax.setText(max + "Ω");
-                OhmiosMin.setText(min + "Ω");
+                OhmiosMax.setText(
+                        max >= 1_000_000 ? String.format("%.2f MΩ", max / 1_000_000f) :
+                                max >= 1_000     ? String.format("%.2f kΩ", max / 1_000f) :
+                                        String.format("%.2f Ω", max)
+                );
+
+                OhmiosMin.setText(
+                        min >= 1_000_000 ? String.format("%.2f MΩ", min / 1_000_000f) :
+                                min >= 1_000     ? String.format("%.2f kΩ", min / 1_000f) :
+                                        String.format("%.2f Ω", min)
+                );
             }
         });
     }
